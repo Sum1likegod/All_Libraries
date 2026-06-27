@@ -156,6 +156,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.numpy_training_venv/
 
 # Spyder project settings
 .spyderproject
