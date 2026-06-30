@@ -1,13 +1,8 @@
-# All_Libraries
-This rep consists all of the libraries that I have till now.
+# NumPy Core Concepts & Data Science Fundamentals
+
+A structured reference guide covering the fundamental operations of NumPy in Python. This repository serves as a daily learning log and a practical reference for handling numerical data efficiently.
 
 
-
-# NumPy Basics & Core Concepts
-
-A structured reference guide covering the fundamental operations of NumPy in Python, based on daily learning notes.
-
----
 
 ## 📌 Table of Contents
 1. [Array Slicing](#1-array-slicing)
@@ -21,6 +16,8 @@ A structured reference guide covering the fundamental operations of NumPy in Pyt
 ---
 
 ## 🍕 1. Array Slicing
+> 📅 **Date Learned:** 29-06-2026
+
 Extracting specific rows and columns from multi-dimensional arrays using the `[rows, columns]` syntax.
 
 ```python
@@ -39,6 +36,8 @@ print(arr_1[:, 2:4])
 
 
 ## 🛠️ 2. Array Creation & Range Generation
+> 📅 **Date Learned:** 29-06-2026
+
 Understanding standard Python ranges versus NumPy's optimized range function.
 
 ### ↔️ Python Native Range
@@ -62,6 +61,7 @@ print(np.arange(2, 10, 2))  # Output: [2 4 6 8]
 ```
 
 ## 🔁 3. Reshaping Arrays & The `-1` Trick
+> 📅 **Date Learned:** 30-06-2026
 
 Changing the dimensions of an array without altering its underlying data.
 
@@ -78,6 +78,7 @@ print(np.arange(2, 17, 2).reshape(-1, 4))
 ```
 
 ## 4. Specialized Array Initialization
+> 📅 **Date Learned:** 30-06-2026
 ### ℹ Initializing with Zeros
 Creates an array filled entirely with `0.0` values of a specified shape tuple `(rows, columns)`.
 
@@ -104,6 +105,8 @@ print(np.random.randint(1, 10, size=(3, 4)))
 ```
 
 ## 💱 5. Data Type Conversion
+> 📅 **Date Learned:** 30-06-2026
+
 You can define an array's data type at creation using the `dtype` parameter, or change an existing array's type using the `.astype()` method.
 
 ```python
@@ -120,6 +123,8 @@ print(arr_1.astype(int))
 ```
 
 ## 📈 6. Statistical Operations & Axes
+> 📅 **Date Learned:** 30-06-2026
+
 NumPy makes calculating descriptive statistics over whole arrays or specific axes simple.
 
 `axis=0`: Performs operations downwards across rows (calculates stats for each individual column).
@@ -144,6 +149,7 @@ print("Std Dev:", np.std(arr_1))
 ```
 
 ## 🔢 7. Matrix Mathematics (Dot Product)
+> 📅 **Date Learned:** 30-06-2026
 
 The dot product is a fundamental linear algebra operation. For matrices, it performs matrix multiplication (multiplying rows by columns and summing the products).
 
@@ -164,6 +170,6 @@ print(np.dot(arr_1, arr_2))
 #  [ 430.  490.]]
 ```
 
-### Key Additions Made For Clarity:
+### 🔑 Key Additions Made For Clarity (30-06-2026):
 * **Axis Explanation:** Beginners often confuse `axis=0` and `axis=1`. I added a visual text note explaining that `axis=0` calculates column-wise averages.
 * **Dot Product Warning:** Added a note about the dimension requirement for matrix dot products (`columns in A == rows in B`), which helps prevent the famous `ValueError` down the road.
