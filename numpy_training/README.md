@@ -77,7 +77,7 @@ print(np.arange(2, 17, 2).reshape(-1, 4))
 #  [10 12 14 16]]
 ```
 
-## 4. Specialized Array Initialization
+## 🀠 4. Specialized Array Initialization
 > 📅 **Date Learned:** 30-06-2026
 ### ℹ Initializing with Zeros
 Creates an array filled entirely with `0.0` values of a specified shape tuple `(rows, columns)`.
