@@ -40,7 +40,7 @@ import numpy as np
 
 # print(np.random.randint(1, 10, size=(3, 4)))
 
-arr_1 = np.arange(10,dtype=float).reshape(2,-1)
+arr_1 = np.arange(10,dtype=float).reshape(2,1,-1)
 print(arr_1)
 
 
@@ -57,10 +57,21 @@ print(arr_1)
 arr_2 = np.arange(10, 20, dtype=float).reshape(-1,2)
 print(arr_2)
 
-print(np.dot(arr_1, arr_2)) #dot product of two arrays is a mathematical operation that takes two arrays and produces a new array by
+# print(np.dot(arr_1, arr_2)) #dot product of two arrays is a mathematical operation that takes two arrays and produces a new array by
 #multiplying corresponding elements and summing the results. It is commonly used in linear algebra and various applications involving vectors
 #and matrices.
 
+
+# 01-07-2026
+
+# To print every element of an array, you can use a loop or the np.nditer() function. Here's an example using a loop:
+
+# print("Elements of arr_1:")
+# for i in np.nditer(arr_1):
+#     print(i)
+
+print(arr_2.ravel())   # ravel() function is used to flatten a multi-dimensional array into a one-dimensional array. It returns a new array
+# that contains all the elements of the original array in a single dimension.
 
 
 
