@@ -12,6 +12,9 @@ A structured reference guide covering the fundamental operations of NumPy in Pyt
 5. [Data Type Conversion](#5-data-type-conversion)
 6. [Statistical Operations & Axes](#6-statistical-operations--axes)
 7. [Matrix Mathematics (Dot Product)](#7-matrix-mathematics-dot-product)
+8. [Iterating Through Arrays](#8-iterating-through-arrays)
+9. [Flattening Arrays (Ravel)](#9-flattening-arrays-ravel)
+
 
 ---
 
@@ -173,3 +176,40 @@ print(np.dot(arr_1, arr_2))
 ### 🔑 Key Additions Made For Clarity (30-06-2026):
 * **Axis Explanation:** Beginners often confuse `axis=0` and `axis=1`. I added a visual text note explaining that `axis=0` calculates column-wise averages.
 * **Dot Product Warning:** Added a note about the dimension requirement for matrix dot products (`columns in A == rows in B`), which helps prevent the famous `ValueError` down the road.
+
+
+---
+
+## ⟳ 8. Iterating Through Arrays
+> 📅 **Date Learned:** 01-07-2026
+
+To efficiently loop through every single element of a multi-dimensional array (without needing nested `for` loops), use NumPy's `nditer()` function.
+
+```python
+# Assuming arr_1 is a multi-dimensional array
+print("Elements of arr_1:")
+for i in np.nditer(arr_1):
+    print(i)
+```
+
+> ⚠️ **Warning:** By default, `nditer` treats the array as **read-only**. If you try to modify the elements while looping, you will get an error. To change values, you must explicitly tell NumPy by passing the `op_flags` argument:
+
+```python
+# To multiply every element by 2:
+for i in np.nditer(arr_1, op_flags=['readwrite']):
+    i[...] = i * 2
+
+## 🏢 9. Flattening Arrays `(Ravel)`
+> 📅 **Date Learned:** 01-07-2026
+
+The `.ravel()` function is used to flatten a multi-dimensional array into a 1D (one-dimensional) array. It returns a new array that contains all the elements of the original array in a single sequence.
+
+```python
+# Assuming arr_2 is a 2D or 3D array
+print(arr_2.ravel()) 
+# Output: [x y z ...] (A clean 1D array)
+```
+
+> 💡 **Pro-Tip (`ravel` vs `flatten`):**
+> * `.ravel()` creates a **view** of the original array. If you change a number in the raveled array, it **will permanently change** the original multi-dimensional array too! It is very fast but can be dangerous.
+> * `.flatten()` creates a completely independent **copy**. Changes made to the flattened array will not affect your original data. Use this when you want to play it safe!
