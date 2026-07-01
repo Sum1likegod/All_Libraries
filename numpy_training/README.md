@@ -198,6 +198,7 @@ for i in np.nditer(arr_1):
 # To multiply every element by 2:
 for i in np.nditer(arr_1, op_flags=['readwrite']):
     i[...] = i * 2
+```
 
 ## 🏢 9. Flattening Arrays `(Ravel)`
 > 📅 **Date Learned:** 01-07-2026
