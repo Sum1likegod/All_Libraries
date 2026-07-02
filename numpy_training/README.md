@@ -252,7 +252,7 @@ Splitting breaks a single array down into multiple smaller arrays. This is frequ
 
 * `np.vsplit()`: Splits an array vertically (separates the rows).
 
-⚠️ **Rule**: The array must be equally divisible by the number of splits you request, otherwise NumPy will throw an error.
+⚠️ **Rule**: The array must be equally divisible by the number of splits you request, otherwise NumPy will throw an error. If you try to split a 3-column array into 2 parts, NumPy will throw an error. If you ever need to make uneven splits, use the `np.array_split()` function instead!
 
 ```python
 # Create a 2D array (2 rows, 6 columns)
