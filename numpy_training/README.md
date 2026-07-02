@@ -5,7 +5,7 @@ A structured reference guide covering the fundamental operations of NumPy in Pyt
 
 
 ## 📌 Table of Contents
-1. [Array Slicing](#1-array-slicing)
+1. [Array Slicing](#1-Array-Slicing)
 2. [Array Creation & Range Generation](#2-array-creation--range-generation)
 3. [Reshaping Arrays & The `-1` Trick](#3-reshaping-arrays--the--1-trick)
 4. [Specialized Array Initialization](#4-specialized-array-initialization)
@@ -14,7 +14,8 @@ A structured reference guide covering the fundamental operations of NumPy in Pyt
 7. [Matrix Mathematics (Dot Product)](#7-matrix-mathematics-dot-product)
 8. [Iterating Through Arrays](#8-iterating-through-arrays)
 9. [Flattening Arrays (Ravel)](#9-flattening-arrays-ravel)
-
+10. [Array Stacking (Combining Data)](#10-Array-Stacking-Combining-Data)
+11. [Array Splitting (Dividing Data)](#10-array-splitting-dividing-data)
 
 ---
 
@@ -214,3 +215,30 @@ print(arr_2.ravel())
 > 💡 **Pro-Tip (`ravel` vs `flatten`):**
 > * `.ravel()` creates a **view** of the original array. If you change a number in the raveled array, it **will permanently change** the original multi-dimensional array too! It is very fast but can be dangerous.
 > * `.flatten()` creates a completely independent **copy**. Changes made to the flattened array will not affect your original data. Use this when you want to play it safe!
+
+## 10. Array Stacking (Combining Data)
+> 📅 **Date Learned:** 02-07-2026
+
+Stacking is used to join multiple existing arrays together. This is a critical operation when combining different datasets or adding new feature columns before training a model.
+
+* **`np.vstack()`**: Stacks arrays vertically (row-wise).
+* **`np.hstack()`**: Stacks arrays horizontally (column-wise).
+
+```python
+import numpy as np
+
+# Create two 1D arrays
+arr_A = np.array([1, 2, 3])
+arr_B = np.array([4, 5, 6])
+
+# Vertical Stack (Creates a 2D array with 2 rows)
+v_stack = np.vstack((arr_A, arr_B))
+print("Vertical Stack:\n", v_stack)
+# Output:
+# [[1 2 3]
+#  [4 5 6]]
+
+# Horizontal Stack (Creates a longer 1D array)
+h_stack = np.hstack((arr_A, arr_B))
+print("Horizontal Stack:", h_stack)
+# Output: [1 2 3 4 5 6]
