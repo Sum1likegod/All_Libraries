@@ -5,17 +5,17 @@ A structured reference guide covering the fundamental operations of NumPy in Pyt
 
 
 ## 📌 Table of Contents
-1. [Array Slicing](#1-Array-Slicing)
-2. [Array Creation & Range Generation](#2-array-creation--range-generation)
-3. [Reshaping Arrays & The `-1` Trick](#3-reshaping-arrays--the--1-trick)
-4. [Specialized Array Initialization](#4-specialized-array-initialization)
-5. [Data Type Conversion](#5-data-type-conversion)
-6. [Statistical Operations & Axes](#6-statistical-operations--axes)
-7. [Matrix Mathematics (Dot Product)](#7-matrix-mathematics-dot-product)
-8. [Iterating Through Arrays](#8-iterating-through-arrays)
-9. [Flattening Arrays (Ravel)](#9-flattening-arrays-ravel)
-10. [Array Stacking (Combining Data)](#10-Array-Stacking-Combining-Data)
-11. [Array Splitting (Dividing Data)](#10-array-splitting-dividing-data)
+1. [Array Slicing](#-1-array-slicing)
+2. [Array Creation & Range Generation](#️-2-array-creation-and-range-generation)
+3. [Reshaping Arrays & The `-1` Trick](#-3-reshaping-arrays--the--1-trick)
+4. [Specialized Array Initialization](#-4-specialized-array-initialization)
+5. [Data Type Conversion](#-5-data-type-conversion)
+6. [Statistical Operations & Axes](#-6-statistical-operations--axes)
+7. [Matrix Mathematics (Dot Product)](#-7-matrix-mathematics-dot-product)
+8. [Iterating Through Arrays](#-8-iterating-through-arrays)
+9. [Flattening Arrays (Ravel)](#-9-flattening-arrays-ravel)
+10. [Array Stacking (Combining Data)](#-10-array-stacking-combining-data)
+11. [Array Splitting (Dividing Data)](#-11-array-splitting-dividing-data)
 
 ---
 
@@ -38,8 +38,7 @@ print(arr_1[:, 2:4])
 
 ```
 
-
-## 🛠️ 2. Array Creation & Range Generation
+## 🛠️ 2. Array Creation and Range Generation
 > 📅 **Date Learned:** 29-06-2026
 
 Understanding standard Python ranges versus NumPy's optimized range function.
@@ -216,7 +215,7 @@ print(arr_2.ravel())
 > * `.ravel()` creates a **view** of the original array. If you change a number in the raveled array, it **will permanently change** the original multi-dimensional array too! It is very fast but can be dangerous.
 > * `.flatten()` creates a completely independent **copy**. Changes made to the flattened array will not affect your original data. Use this when you want to play it safe!
 
-## 10. Array Stacking (Combining Data)
+## 📚 10. Array Stacking (Combining Data)
 > 📅 **Date Learned:** 02-07-2026
 
 Stacking is used to join multiple existing arrays together. This is a critical operation when combining different datasets or adding new feature columns before training a model.
@@ -242,3 +241,38 @@ print("Vertical Stack:\n", v_stack)
 h_stack = np.hstack((arr_A, arr_B))
 print("Horizontal Stack:", h_stack)
 # Output: [1 2 3 4 5 6]
+```
+
+## 🤸 11. Array Splitting (Dividing Data)
+> 📅 Date Learned: 02-07-2026
+
+Splitting breaks a single array down into multiple smaller arrays. This is frequently used to separate a dataset into "Training" and "Testing" batches, or to isolate specific columns.
+
+* `np.hsplit()`: Splits an array horizontally (separates the columns).
+
+* `np.vsplit()`: Splits an array vertically (separates the rows).
+
+⚠️ **Rule**: The array must be equally divisible by the number of splits you request, otherwise NumPy will throw an error.
+
+```python
+# Create a 2D array (2 rows, 6 columns)
+grid = np.arange(1, 13).reshape(2, 6)
+# grid looks like:
+# [[ 1  2  3  4  5  6]
+#  [ 7  8  9 10 11 12]]
+
+# Horizontally split into 3 equal arrays (2 columns each)
+split_result = np.hsplit(grid, 3)
+
+print("First Split Piece:\n", split_result[0])
+# Output:
+# [[1 2]
+#  [7 8]]
+
+print("Second Split Piece:\n", split_result[1])
+# Output:
+# [[3 4]
+#  [9 10]]
+```
+
+
