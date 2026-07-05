@@ -1,8 +1,8 @@
 > **Note**: *In Pandas, data is structured as a two-dimensional grid where features (or variables) are represented as columns, and observations (or data points) are represented as rows.*
 
 # 📌 Table of Contents
-1. [Understanding the getitem FutureWarning](1-Understanding-the-getitem-FutureWarning)
-    - [The Solution: .loc vs .iloc](The-solution-loc-vs-iloc)
+1. [Understanding the getitem FutureWarning](#-1-understanding-the-getitem-futurewarning)
+    - [The Solution: .loc vs .iloc](#-the-solution-loc-vs-iloc)
 
 
 
