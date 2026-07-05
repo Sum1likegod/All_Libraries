@@ -10,7 +10,7 @@
 4. [Introduction to pd.to_numeric](#-4-introduction-to-pdto_numeric)
     - [Why 'coerce' is Mandatory for Dirty Data](#-why-coerce-is-mandatory-for-dirty-data)
     - [Common Regex Shortcuts Without Brackets](#-why-coerce-is-mandatory-for-dirty-data)
-    - [When Are Square Brackets Not Needed?]()
+    - [When Are Square Brackets Not Needed?](#-when-are-square-brackets-not-needed)
 
 
 
