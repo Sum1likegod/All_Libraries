@@ -19,7 +19,7 @@ series_1 = pd.Series(data = arr_1, index = ["Aman", "Bala", "Chitra", "Deepak", 
 # integer-based but label-based. The correct way to access the first element is by using the label "Aman".
 
 
-series_nan = pd.Series(data = [1, 2, np.nan, 4, 5], dtype = "float32")
+series_nan = pd.Series(data = [1, 2, 1.5, 4, 5], dtype = "float32")
 
 series_2 = pd.to_numeric(series_nan, errors = 'coerce') # The pd.to_numeric() function is used to convert the series_nan to a numeric data type.
 # The errors='coerce' argument specifies that any non-numeric values (like NaN) should be converted to NaN. The resulting series_2 will have

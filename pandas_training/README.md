@@ -15,7 +15,7 @@
 
 
 
-## 🔮 1. Understanding the getitem FutureWarning
+## 🔮 1. Understanding the `getitem` FutureWarning
 > 📅 Date Learned: 05-07-2026
 
 When working with a Pandas Series, accessing data using standard bracket notation `[]` with an integer can cause ambiguity if your Series uses non-integer labels. Pandas will soon deprecate this behavior to align with how DataFrames work.
