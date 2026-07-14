@@ -104,10 +104,10 @@ print(prices.dtype)
 
 💡 **Pro-Tip**: Pandas defaults to 64-bit data types (like `int64` or `float64`). If you know your numbers will not be exceptionally large or require maximum precision, forcing them into `int32` or `float32` immediately cuts your memory usage in half.
 
-### 🔁 Changing Data Types with astype
+### 🔁 Changing Data Types with `astype`
 > 📅 Date Learned: 05-07-2026
 
-If you load data from external files, Pandas might interpret numerical values as strings (text), which Pandas refers to as the `object` data type. You can cast these to the correct mathematical type using the `.astype()` method.
+If you load data from external files, Pandas might interpret numerical values as `strings (text)`, which Pandas refers to as the `object` data type. You can cast these to the correct mathematical type using the `.astype()` method.
 
 ```python
 import pandas as pd
@@ -239,3 +239,5 @@ print(clean_currency)
 # 2    300
 # dtype: object
 ```
+
+💡 ***Bonus Tip***: If you also want to get rid of the annoying spaces left behind in examples like "10 USD", you can use `r'\s*USD\s*'`. The `\s*` tells Regex to also target any spaces that appear immediately before or after the exact word "USD".

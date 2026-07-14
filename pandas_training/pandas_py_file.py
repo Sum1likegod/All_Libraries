@@ -27,3 +27,8 @@ series_2 = pd.to_numeric(series_nan, errors = 'coerce') # The pd.to_numeric() fu
 
 print(series_2)
 
+print(series_1.loc(1))# throws an error because loc is used to access elements by label, and the correct syntax is series_1.loc["Aman"] 
+# to access the value associated with the label "Aman".
+
+
+
