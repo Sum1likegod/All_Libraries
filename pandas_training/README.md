@@ -518,3 +518,4 @@ print(df)
 - **Series**: Will only accept 1D arrays. It rejects 2D arrays completely.
 
 - ***DataFrame***: Primarily designed for 2D arrays, but will happily accept a 1D array and just format it as a single-column table.
+
