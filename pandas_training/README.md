@@ -459,7 +459,7 @@ bad_data = {
 
 The `pd.Series()` constructor shares memory exactly like the `pd.DataFrame()` constructor.
 
-Because a Pandas Series is essentially just a 1D NumPy array wrapped with an index, Pandas will try to save your computer's RAM by creating a "view" of the original array rather than duplicating it. If you modify the original 1D NumPy array, the Pandas Series will magically change right along with it.
+Because a Pandas Series is essentially just a `1D NumPy array` wrapped with an index, Pandas will try to save your computer's RAM by creating a `"view"` of the original array rather than duplicating it. If you modify the original 1D NumPy array, the Pandas Series will magically change right along with it.
 
 And yes, the solution is exactly the same: if you want to break that memory link and create a completely independent object, you must explicitly pass `copy=True` into the Series constructor.
 
