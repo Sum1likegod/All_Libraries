@@ -378,7 +378,7 @@ print(default_scores)
 ### 🚫 The Strict Rule for Series (1D Only)
 > 📅 Date Learned: 14-07-2026
 
-You are 100% correct about the `pd.Series()` constructor. It is strictly enforced as a 1-dimensional data structure. If you attempt to pass a 2D NumPy array (a matrix) into a Series, Pandas will completely crash and throw a `ValueError`.
+It is strictly enforced as a 1-dimensional data structure. If you attempt to pass a 2D NumPy array (a matrix) into a Series, Pandas will completely crash and throw a `ValueError`.
 
 ```python
 
