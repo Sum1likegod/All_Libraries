@@ -40,6 +40,8 @@ series_1 = pd.Series(data = arr_1, index = ["Aman", "Bala", "Chitra", "Deepak", 
 # df_2 = pd.DataFrame(data = [series_1, series_nan], columns = ["Aman", "Bala"], index= ["Series_1", "Series_nan"])
 # print(df_2)
 
-base_path = pt.Path(__file__).parent
+base_path = pt.Path(__file__).parent/"annual-enterprise-survey-2025-financial-year-provisional-size-bands.csv"
 
-df_1 = pd.read_csv()
+df_1 = pd.read_csv(base_path, usecols = [0,1,2,3,4,5,6])
+print(df_1.head())
+
